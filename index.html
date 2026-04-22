@@ -33,33 +33,57 @@
         .nav-links a:hover { background: var(--gold); color: black; }
 
         /* Banner - No background color, just image and overlay */
-        .hero {
-  height: 60vh; 
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('banner.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  border-bottom: 2px solid var(--gold);
-}
-
+        /* HERO FIX */
 .hero{
   height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--gold);
 }
 
 /* Tablet */
 @media (max-width: 768px){
   .hero{
     height: 40vh;
+    background-position: center top; /* important fix */
   }
 }
 
-/* Mobile */
-@media (max-width: 480px){
+/* Mobile FIX */
+@media (max-width: 600px){
   .hero{
-    height: 35vh;
+    height: 30vh;
+    background-position: center top; /* banner top visible */
+  }
+
+  /* NAV BUTTONS TO BOTTOM */
+  .nav-links{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(4, 31, 21, 0.95);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 2px solid var(--gold);
+    z-index: 999;
+  }
+
+  .nav-links a{
+    width: auto;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  /* space avoid overlap */
+  body{
+    padding-bottom: 60px;
   }
 }
         /* Generic Zip-Zap Container */
