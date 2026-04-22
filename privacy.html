@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prasanna Printers & Digitals | Premium Printing Solutions</title>
+<link rel="icon" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root {
+--bg:#062c1e;
+--gold:#d4af37;
+--white:#fff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:var(--bg);color:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{
+padding:15px 5%;
+background:#041f15;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid var(--gold);
+position:sticky;top:0;z-index:1000;
+}
+
+.logo-box{display:flex;align-items:center;gap:10px;}
+.logo-box img{height:60px;}
+.logo-box h2{color:var(--gold);font-size:1.5rem;}
+
+.back-home{border:1px solid var(--gold);padding:6px 12px;color:#fff;text-decoration:none}
+
+/* HEADER */
+.page-header{
+padding:120px 5%;
+text-align:center;
+
+background-size:cover;
+}
+.page-header h1{font-size:3rem;color:var(--gold);}
+
+/* ZIP ZAP */
+.section{padding:80px 10%;}
+.row{display:flex;align-items:center;gap:60px;margin-bottom:100px;}
+.row:nth-child(even){flex-direction:row-reverse;}
+
+.img img{width:100%;border-radius:15px;border:2px solid var(--gold);}
+.text h2{color:var(--gold);margin-bottom:20px;}
+.text p{color:#ccc;line-height:1.8;}
+
+.pop{color:var(--gold);font-weight:bold;}
+
+/* BUTTONS */
+#topBtn{
+position:fixed;bottom:25px;right:25px;
+background:var(--gold);border:none;padding:12px;border-radius:50%;
+display:none;cursor:pointer;
+}
+
+.whatsapp{
+position:fixed;bottom:25px;left:25px;
+background:#25D366;color:#fff;padding:12px;border-radius:50%;
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  background: #000;   /* black background */
+  color: #555;
+  font-size: 0.8rem;
+  border-top: 1px solid #111;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.row{flex-direction:column!important;text-align:center;}
+.page-header h1{font-size:2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo-box">
+<img src="logo.png">
+<h2>Prasanna Printers & Digitals</h2>
+</div>
+<a href="index.html" class="back-home">HOME</a>
+</nav>
+
+<div class="page-header">
+<h1 data-aos="fade-down">Privacy Policy</h1>
+</div>
+
+<section class="section">
+
+<div class="row">
+<div class="img" data-aos="fade-right">
+<img src="privacy1.jpg">
+</div>
+<div class="text" data-aos="fade-left">
+<h2>Data <span class="pop">Collection</span></h2>
+<p>We collect minimal information such as <span class="pop">Name</span>, phone number and order details only for communication purposes.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="img" data-aos="fade-left">
+<img src="privacy2.jpg">
+</div>
+<div class="text" data-aos="fade-right">
+<h2>Usage of <span class="pop">Information</span></h2>
+<p>Your data is used to improve services and provide better <span class="pop">customer experience</span>.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="img" data-aos="fade-right">
+<img src="privacy3.jpg">
+</div>
+<div class="text" data-aos="fade-left">
+<h2>Security & <span class="pop">Protection</span></h2>
+<p>We ensure your data is safe and not shared with any unauthorized parties.</p>
+</div>
+</div>
+
+</section>
+
+<!-- Buttons -->
+<button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+<a href="https://wa.me/919677197131" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<footer>
+  <p>© 2005 Prasanna Printers & Digitals. All Rights Reserved. | GSTIN: 33BURPS7365E1Z3</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000});
+let btn=document.getElementById("topBtn");
+window.onscroll=()=>{btn.style.display=window.scrollY>300?"block":"none";}
+btn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+</script>
+
+
+</body>
+</html>
