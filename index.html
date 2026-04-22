@@ -32,60 +32,35 @@
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--gold); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
         .nav-links a:hover { background: var(--gold); color: black; }
 
-        /* Banner - No background color, just image and overlay */
-        /* HERO FIX */
+        /* NEW HERO IMAGE */
 .hero{
-  height: 60vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('banner.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px solid var(--gold);
+  width:100%;
+  overflow:hidden;
+  border-bottom:2px solid var(--gold);
+}
+
+.hero img{
+  width:100%;
+  height:60vh;   /* desktop */
+  object-fit:cover;
+  display:block;
 }
 
 /* Tablet */
-@media (max-width: 768px){
-  .hero{
-    height: 40vh;
-    background-position: center top; /* important fix */
+@media(max-width:768px){
+  .hero img{
+    height:40vh;
   }
 }
 
-/* Mobile FIX */
-@media (max-width: 600px){
-  .hero{
-    height: 30vh;
-    background-position: center top; /* banner top visible */
-  }
-
-  /* NAV BUTTONS TO BOTTOM */
-  .nav-links{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(4, 31, 21, 0.95);
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    border-top: 2px solid var(--gold);
-    z-index: 999;
-  }
-
-  .nav-links a{
-    width: auto;
-    font-size: 0.8rem;
-    padding: 8px 12px;
-  }
-
-  /* space avoid overlap */
-  body{
-    padding-bottom: 60px;
+/* Mobile */
+@media(max-width:600px){
+  .hero img{
+    height:30vh;
+    object-fit:cover; /* change to contain if needed */
   }
 }
+        
         /* Generic Zip-Zap Container */
         .zip-zap-section {
             padding: 80px 10%;
@@ -221,14 +196,12 @@
             <img src="logo.png" alt="Logo">
             <h1>PRASANNA PRINTERS & DIGITALS</h1>
         </a>
-        <div class="nav-links">
-            <a href="about.html">ABOUT US</a>
-            <a href="help.html">HELP DESK</a>
-        </div>
+        
     </nav>
 
-    <header class="hero"></header>
-
+    <header class="hero">
+  <img src="banner.jpg" alt="Banner">
+</header>
     <section class="zip-zap-section" data-aos="fade-up">
         <div class="company-img-box">
             <img src="founder.jpg" alt="Santhosh Kumar .P" style="border: none; box-shadow: none;">
@@ -330,8 +303,10 @@
         </div>
         <div class="footer-bottom">
             <p>© 2005 Prasanna Printers & Digitals | Built for Industrial Excellence.
-<a href="privacy.html" style="color:#d4af37;">Privacy Policy</a> | 
-<a href="terms.html" style="color:#d4af37;">Terms & Conditions</a>
+    <a href="about.html" style="color:#d4af37;">About</a> | 
+    <a href="help.html" style="color:#d4af37;">Help</a> | 
+    <a href="privacy.html" style="color:#d4af37;">Privacy Policy</a> | 
+    <a href="terms.html" style="color:#d4af37;">Terms & Conditions</a>
 </p>
         </div>
     </footer>
